@@ -1,0 +1,181 @@
+@font-face {
+
+  font-family: HelveticaNeueLight;
+  src: url('../fonts/HelveticaNeueLTStd-Th.otf');
+  font-weight: 100;
+
+}
+
+@font-face {
+
+  font-family: HelveticaHumble;
+  src: url('../fonts/Helvetica-Bold.ttf');
+  font-weight: 100;
+
+}
+
+
+.jumbotron{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 600px;
+  background: url("../img/coverpic2.jpg") bottom right no-repeat;
+  background-size: cover;
+  color: #FFFFFF;
+  
+  text-align: bottom;
+  position: relative;
+  padding-bottom: 0px;
+}
+
+
+.jumbo_humbletill_img{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 600px;
+  background: url("../img/humbletill1.jpg") bottom center no-repeat;
+  
+  background-size: cover;
+  color: #FFFFFF;
+  
+  text-align: bottom;
+  position: relative;
+  padding-bottom: 0px;
+}
+
+.jumbo_redworld_img{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 600px;
+  background: url("../img/redworld1.jpg") bottom center no-repeat;
+  
+  background-size: cover;
+  color: #FFFFFF;
+  
+  text-align: bottom;
+  position: relative;
+  padding-bottom: 0px;
+}
+
+.jumbo_pastel_img{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 600px;
+  background: url("../img/pastel1.jpg") center left no-repeat;
+  
+  background-size: cover;
+  color: #FFFFFF;
+  
+  text-align: bottom;
+  position: relative;
+  padding-bottom: 0px;
+}
+
+#jumbo_oneline_txt {
+ 
+  padding-left: 40px;
+  padding-bottom: 30px;
+  margin: 0px;
+  position: absolute;
+  font-size: 60px;
+  font-family: HelveticaNeueLight;
+  font-weight: 100;
+  text-align: left;
+  bottom: 30%;
+  left: 0;
+
+
+}
+
+#jumbo_humble_txt {
+ 
+  padding-right: 50px;
+  padding-top: 40px;
+  margin: 0px;
+  position: absolute;
+  font-size: 30px;
+  font-family: HelveticaHumble;
+  text-align: left;
+  top: 0;
+  right: 0;
+
+
+}
+
+
+.container-fluid{
+  padding-left: 0px;
+  padding-right: 0px;
+
+  
+}
+
+.col_image {
+
+  padding-top: 8px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-bottom: 20px;
+  
+  margin: 0px;
+
+}
+
+.maak-wyd {
+
+  width: 100%
+  
+
+}
+
+.fadeMyImg {
+   opacity: 1;
+   transition: opacity .15s ease-in-out;
+   -moz-transition: opacity .15s ease-in-out;
+   -webkit-transition: opacity .15s ease-in-out;
+   }
+
+.fadeMyImg:hover {
+      opacity: 0.8;
+      border: none;
+  }
+
+
+
+
+
+#nav-ul > li > a.active {
+
+  background-color: #272727;
+
+}
+
+.modal-open {
+  overflow: hidden;
+  overflow-y: auto;
+  margin-right: 0px; !important; 
+  
+}
+.modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: auto;
+  overflow-y: none;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+
+body.modal-open, 
+.modal-open .navbar-fixed-top, 
+.modal-open .navbar-fixed-bottom 
+{
+    
+}
+
+
+
