@@ -4,20 +4,18 @@ App.Router.map(function() {
  	
 
 
-	this.resource('product', { path:  ':product_name' } ); 
+	this.resource('product', { path:  'products/:product_name' } ); 
 
 
+  this.resource('hardware', { path:  'hardware/:product_name' } ); 
  	
 
- 	this.route('humbletill');  			
- 	this.route('redworld');  			
+ 	this.route('contact');
+  this.route('about');
+  			
 
   	
-  	this.route('pastel');
-  	this.route('retail');
-  	this.route('kova');
-  	this.route('socket');
-  	this.route('beacons');
+  	
 });
 
 
@@ -55,6 +53,11 @@ var products = [{
 
 
 
+$(document).on('click', "a.navbutton", function() {
+    if (!$(this).hasClass('active')) {
+      $('body').scrollTop(0);
+    }  
 
+});
 
 

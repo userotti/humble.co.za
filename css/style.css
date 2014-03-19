@@ -18,8 +18,8 @@
 .jumbotron{
   margin-top: 0px;
   margin-bottom: 0px;
-  padding-top: 600px;
-  background: url("../img/coverpic2.jpg") bottom right no-repeat;
+  padding-top: 700px;
+  background: url("../img/coverpic3.jpg") top left no-repeat;
   background-size: cover;
   color: #FFFFFF;
   
@@ -74,14 +74,14 @@
 #jumbo_oneline_txt {
  
   padding-left: 40px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   margin: 0px;
   position: absolute;
   font-size: 60px;
   font-family: HelveticaNeueLight;
   font-weight: 100;
   text-align: left;
-  bottom: 30%;
+  bottom: 20%;
   left: 0;
 
 
@@ -150,6 +150,13 @@
 
 }
 
+#nav-ul > li > a, #nav-ul > li > p {
+
+
+  font-weight: 100;
+
+}
+
 .modal-open {
   overflow: hidden;
   overflow-y: auto;
@@ -177,5 +184,23 @@ body.modal-open,
     
 }
 
+
+.myfooter {
+
+  margin-bottom: 40px;
+  
+
+}
+
+#footertext {
+
+  color: #fff;
+  text-align: bottom;
+  padding:12px 15px;
+  font-weight: 100px;
+  margin: 0px;
+  
+
+}
 
 

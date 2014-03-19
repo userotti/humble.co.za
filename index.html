@@ -12,71 +12,18 @@
   
   <body>
     
-    <!-- APP TEMPLATE -->
+    <!-- APP TEMPLATE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 
     <script type="text/x-handlebars" data-template-name="application">
 
       <div class="container">
 
-        <!-- NAVIGATION -->
+    
+        {{outlet}}
 
-    <nav class="navbar-wrapper navbar-default" role="navigation">
-  
-      <div class="" style="padding-left: 15px;">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            
-          </div>
-          
-
-          <div class="collapse navbar-collapse navbar-ex1-collapse">
-          
-            
-            <ul class="nav navbar-nav" id="nav-ul"> <!-- Left sided elements -->
-      
-            
-
-              <!-- Products List -->  
-
-              
-              <li>{{#link-to 'index'}} <span class="glyphicon glyphicon-home"></span>{{/link-to}}</li>
-              <li>{{#link-to 'product' 'humbletill'}}Humble Till{{/link-to}}</li>
-              <li>{{#link-to 'product' 'redworld'}}Redworld{{/link-to}}</li>
-              <li>{{#link-to 'product' 'pastel'}}Sage Pastel{{/link-to}}</li> 
-              <li>{{#link-to 'retail'}}Retail Analytics{{/link-to}}</li> 
-              
-
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hardware<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li>{{#link-to 'kova'}}Kova Stand{{/link-to}}</li>
-                  <li>{{#link-to 'socket'}}Socket Mobile{{/link-to}}</li>
-                  <li>{{#link-to 'beacons'}}Beacons{{/link-to}}</li> 
-                </ul>
-              </li>
-
-                   
-            </ul> <!-- Left sided elements -->
-            
-
-            <ul class="nav navbar-nav navbar-right"> <!-- right hand elements -->
-              <li ><a data-toggle="modal" href="#myModal"  > Sign in</a></li>
-              <li ><a href="#"> Register</a></li>
-            </ul>
-            
-          </div><!-- /.navbar-collapse → -->
-
-
-    </nav>
-
-
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="ture">
+      <!-- MODAL -->  
+        
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="ture">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -95,59 +42,152 @@
         </div>
       </div>
     </div>   
+ 
 
-        {{outlet}}
+      <div class="container-fluid">  
+        <footer class="navbar-wrapper navbar-default myfooter" > 
 
-      
+          <div class="navbar-footer">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" >
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            
+          </div>
+
+          <div class="collapse navbar-collapse navbar-ex1-collapse">
+        
+            <ul class="nav navbar-nav navbar-left" id="nav-ul"> <!-- right hand elements -->
+              
+              <li > <p id="footertext"> humble software (033) 2342 987</p> <li>
+             
+
+            </ul>
+            
+            <ul class="nav navbar-nav navbar-right" id="nav-ul"> <!-- right hand elements -->
+              
+             
+              <li >{{#link-to 'contact'}}Contact{{/link-to}}</li>
+              <li >{{#link-to 'about'}}About{{/link-to}}</li>
+
+            </ul>
+            
+          </div>
+
+        </footer>
+        </div>  
+
 
 
       </div>
 
     </script>
 
-    <!-- INDEX TEMPLATE -->
+    <!-- INDEX TEMPLATE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 
     <script type="text/x-handlebars" data-template-name="index"> 
-      <!-- JUMBOTRON -->
+     
 
-    <div class="container-fluid"> 
-    <div class="jumbotron">
+                <!-- JUMBOTRON -->
+
+          <div class="container-fluid"> 
+            <div class="jumbotron">
+                
+                <p id="jumbo_oneline_txt">We Love Retail</p>
+                
+                <p id="jumbo_humble_txt">humble</p>
+
+            </div>
+          </div>
+
+               <!-- NAVIGATION -->
+
+          <nav class="navbar-wrapper navbar-default" role="navigation">
         
-        <p id="jumbo_oneline_txt">We Love Retail</p>
-        
-        <p id="jumbo_humble_txt">humble</p>
+              
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  
+                </div>
+                
 
-    </div>
-    </div>
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                
+                  
+                  <ul class="nav navbar-nav" id="nav-ul"> <!-- Left sided elements -->
+            
+                  
 
-    
+                    <!-- Products List -->  
+
+                    
+                    <li>{{#link-to 'index' class="navbutton"}} <span class="glyphicon glyphicon-home"></span>{{/link-to}}</li>
+                    <li>{{#link-to 'product' 'humbletill' class="navbutton"}}Humble Till{{/link-to}}</li>
+                    <li>{{#link-to 'product' 'redworld' class="navbutton"}}Redworld{{/link-to}}</li>
+                    <li>{{#link-to 'product' 'pastel' class="navbutton"}}Sage Pastel{{/link-to}}</li> 
+                    <li>{{#link-to ''}}Retail Analytics{{/link-to}}</li> 
+                    
+
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hardware<b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li>{{#link-to 'hardware'}}Kova Stand{{/link-to}}</li>
+                        <li>{{#link-to 'hardware'}}Socket Mobile{{/link-to}}</li>
+                        <li>{{#link-to 'hardware'}}Beacons{{/link-to}}</li> 
+                      </ul>
+                    </li>
+
+                         
+                  </ul> <!-- Left sided elements -->
+                  
+
+                  <ul class="nav navbar-nav navbar-right" id="nav-ul"> <!-- right hand elements -->
+                    <li ><a data-toggle="modal" href="#myModal"  > Sign in</a></li>
+                    <li ><a href="#"> Register</a></li>
+                  </ul>
+                  
+                </div><!-- /.navbar-collapse → -->
+
+
+          </nav>
 
     <!-- 3 BOTTOM ITEMS -->
 
-    <div >
-          <div class="">
+         <div >
+         
             <div class="col-md-4 col_image" >
               {{#link-to 'product' 'humbletill'}} <img class="img-responsive maak-wyd fadeMyImg" src="img/humble_col.jpg" > {{/link-to}}
               <h3 class="text-left">Love Your Till</h3>
               <p>The humble till is designed to make running your business easier. All you need is an iPad, our app and your ready to go!</p>
-              <a href="#" class="btn btn-success">Get it now @ R95 a month</a>
+             <!-- <a href="#" class="btn btn-success">Get it now @ R95 a month</a> -->
             </div>
             
             <div class="col-md-4 col_image">
               {{#link-to 'product' 'redworld'}}<img class="img-responsive maak-wyd fadeMyImg " src="img/redworld_col.jpg">{{/link-to}}
               <h3 class="text-left">Redworld</h3>
               <p>Redworld was designed to help stores acquire new customers, retain and service existing customers and to increase profit for the stores.</p>
-              <a href="#" class="btn btn-success">Available for R995</a>
+             <!-- <a href="#" class="btn btn-success">Available for R995</a> -->
             </div>
  
             <div class="col-md-4 col_image">
              {{#link-to 'product' 'pastel'}}<img class="img-responsive maak-wyd fadeMyImg" src="img/pastel_col.jpg">{{/link-to}}
               <h3 class="text-left">Pastel</h3>
               <p>My Business Online is constantly evolving. There are no upgrade hassles - you don''t need to worry about installing new versions of software, you will automatically be working on the latest version of our software. </p>
-              <a href="#" class="btn btn-success">Book Now @ $699</a>
+              <!-- <a href="#" class="btn btn-success">Book Now @ $699</a> -->
             </div>
-          </div>
+          
         </div>
+
+
+
 
     <!-- Sign in Modal -->
         
@@ -157,16 +197,66 @@
 
     <!-- SOFTWARE PRODUCT TEMPLATE -->
 
-    
-    
-
-
-    
-
-
+ 
 
     <script type="text/x-handlebars" data-template-name="product">
+           <!-- NAVIGATION -->
 
+    
+       <nav class="navbar-wrapper navbar-default" role="navigation">
+        
+              
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  
+                </div>
+                
+
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                
+                  
+                  <ul class="nav navbar-nav" id="nav-ul"> <!-- Left sided elements -->
+            
+                  
+
+                    <!-- Products List -->  
+
+                    
+                    <li>{{#link-to 'index'class="navbutton"}} <span class="glyphicon glyphicon-home"></span>{{/link-to}}</li>
+                    <li>{{#link-to 'product' 'humbletill'class="navbutton"}}Humble Till{{/link-to}}</li>
+                    <li>{{#link-to 'product' 'redworld'class="navbutton"}}Redworld{{/link-to}}</li>
+                    <li>{{#link-to 'product' 'pastel'class="navbutton"}}Sage Pastel{{/link-to}}</li> 
+                    <li>{{#link-to ''}}Retail Analytics{{/link-to}}</li> 
+                    
+
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hardware<b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li>{{#link-to 'hardware'}}Kova Stand{{/link-to}}</li>
+                        <li>{{#link-to 'hardware'}}Socket Mobile{{/link-to}}</li>
+                        <li>{{#link-to 'hardware'}}Beacons{{/link-to}}</li> 
+                      </ul>
+                    </li>
+
+                         
+                  </ul> <!-- Left sided elements -->
+                  
+
+                  <ul class="nav navbar-nav navbar-right" id="nav-ul"> <!-- right hand elements -->
+                    <li ><a data-toggle="modal" href="#myModal"  > Sign in</a></li>
+                    <li ><a href="#"> Register</a></li>
+                  </ul>
+                  
+                </div><!-- /.navbar-collapse → -->
+
+
+      </nav>
     
       <div class="container-fluid"> 
         <div {{bind-attr class=jumbo_img_class}}>
@@ -182,7 +272,6 @@
       <h1> {{heading}} </h1>
 
       <p> {{textbody}} </p>
-
 
     </script>
     
