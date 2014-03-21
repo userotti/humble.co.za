@@ -1,0 +1,45 @@
+   <script type="text/x-handlebars" data-template-name="application">
+
+     
+      <div class="container">
+    
+        {{outlet}}
+
+      <!-- MODAL -->  
+        
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="ture">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title"> humble Till </h4>
+          </div>
+          <div class="modal-body">
+              <div style="padding-bottom: 20px"> 
+             
+               
+                    <p style=""> Username: </p> <input type="text" class="input-xlarge" id="user_email" name="user_email" rel="popover" data-content="What’s your email address?" data-original-title="Email"> 
+              </div>
+              <div>      
+               
+                     <p style=""> Password: </p> <input type="text" class="input-xlarge" id="user_email" name="user_email" rel="popover" data-content="What’s your email address?" data-original-title="Email"> 
+
+              </div>
+          </div>    
+          
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal"> Close </button>
+            <button type="button" class="btn btn-success"> Sign in </button>
+          </div>
+        </div>
+      </div>
+    </div>   
+ 
+
+     </div> 
+
+
+     
+
+    </script>
