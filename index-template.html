@@ -53,9 +53,9 @@
                     <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hardware<b class="caret"></b></a>
                       <ul class="dropdown-menu">
-                        <li>{{#link-to 'hardware'}}Kova Stand{{/link-to}}</li>
-                        <li>{{#link-to 'hardware'}}Socket Mobile{{/link-to}}</li>
-                        <li>{{#link-to 'hardware'}}Beacons{{/link-to}}</li> 
+                        <li>{{#link-to 'hardware' 'kova' class='sub_menu_click'}}Kova Stand{{/link-to}}</li>
+                        <li>{{#link-to 'hardware' 'socketmobile' class='sub_menu_click'}}Socket Mobile{{/link-to}}</li>
+                        <li>{{#link-to 'hardware' 'beacons' class='sub_menu_click'}}Beacons{{/link-to}}</li> 
                       </ul>
                     </li>
 
@@ -64,8 +64,8 @@
                   
 
                   <ul class="nav navbar-nav navbar-right" id="nav-ul"> <!-- right hand elements -->
-                    <li ><a data-toggle="modal" href="#myModal" class="navbutton" > Sign in</a></li>
-                    <li ><a href="#" class="navbutton"> Register</a></li>
+                    <li ><a data-toggle="modal" href="#myModalSign"  class"navbutton"> Sign in</a></li>
+                    <li ><a data-toggle="modal" href="#myModalReg" > Register</a></li>
                   </ul>
                   
                 </div><!-- /.navbar-collapse → -->
@@ -112,15 +112,7 @@
 
     
         
-        <div class="container-fluid" style="float: right">  
-                
-                {{#link-to 'contact' class="bottomtext navbutton"}} Contact {{/link-to}}
-
-
-                {{#link-to 'contact' class="bottomtext navbutton"}} About {{/link-to}}
-                        
-
-        </div>  
+       
   
 
         </div>

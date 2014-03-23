@@ -34,9 +34,13 @@
     <?php include('software-detail-templates.html'); ?>
 
 
-    <!-- Contact  Temp-->
+    <!-- Contact & about Temp-->
 
     <?php include('contact-template.html'); ?>  
+   
+     <?php include('about-template.html'); ?>  
+    
+    <?php include('hardware-template.html'); ?>  
    
 
 

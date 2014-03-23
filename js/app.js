@@ -21,7 +21,7 @@ App.Router.map(function() {
   
 
 
-  this.resource('hardware', { path:  'hardware/:product_name' } ); 
+  this.resource('hardware', { path:  '/hardware/:hardware_name' } ); 
  	
 
  	this.route('contact');
@@ -43,33 +43,73 @@ App.ContactRoute = Ember.Route.extend({
     }
 });
 
+App.AboutRoute = Ember.Route.extend({
+    model: function() {
+        
+        return {'about': 'stuff about the team',
+                
+         }
+
+    }
+});
+
 
 
 
 App.ProductRoute = Ember.Route.extend({
     model: function(params) {
         
-                
+         console.log(products.findBy('name', params.product_name));     
         return products.findBy('name', params.product_name);
     }
 });
 
 
-App.ProductsController = Ember.Controller.extend({
-    
-   
+App.HardwareRoute = Ember.Route.extend({
+    model: function(params) {
+        
+             
+        return hardware.findBy('name', params.hardware_name);
+    }
+});
+/*
+App.ProductController = Ember.Controller.extend({
+  open: function() {
+    return ((new Date()).getDay() === 0) ? "Closed" : "Open";
+  }.property()
+
+
+  ispoeskak: false,
+
+  oneline: "sdfsdfsdfsdf",
+  jumbo_img_class : "jumbo_humbletill_img",
+
+
+  tri: function() {
+
+    console.log("hierie fubctdion wored net een keer gerun, as hy gemaak word");
+
+    return ("popopo")
+  }.property(),
+
+  
+
+  }
+
 });
 
-
+*/
 
 
 
 App.FeaturesRoute = Ember.Route.extend({
     model: function() {
            
-           
+        console.log(this.modelFor('product').name);   
 
         return this.modelFor('product');
+
+
     }
 
     
@@ -141,6 +181,45 @@ var products = [{
 
 }];
 
+var sd = [{}];
+
+
+var hardware = [{
+
+  
+    "name": "kova",
+    "jumbo_img_class": "jumbo_kova_img",
+    "heading" : "Kova Stand",
+    "text" : "the stand is great",
+
+
+
+  },
+
+
+  {
+    "name": "socketmobile",
+    "jumbo_img_class": "jumbo_socket_img",
+    "heading" : "Socket Mobile",
+    "text" : "the socket is great",
+
+
+
+  },
+
+  {
+    "name": "beacons",
+    "jumbo_img_class": "jumbo_beacon_img",
+    "heading" : "Beacons",
+    "text" : "the beacons are great",
+
+
+
+  
+
+
+}];
+
 
 
 $(document).on('click', "a.navbutton", function() {
@@ -208,6 +287,11 @@ $(window).resize(function() {
 
 });
 
+$(window).unload( function () 
+{
+  checkalltrons();
+});
+
 $(document).ready(function() {
 
   
@@ -235,6 +319,15 @@ $(document).on('click', '.navbutton', function() {
 
 });
 
+$(document).on('click', '.sub_menu_click', function() {
+
+  checkalltrons();
+
+  console.log('hola');
+
+});
+
+
 
 function checkalltrons(){
 
@@ -245,6 +338,14 @@ function checkalltrons(){
   checkandshift($(document).find('.jumbo_redworld_img'), 330, 500);
 
   checkandshift($(document).find('.jumbo_contact_img'), 400, 500);
+
+  checkandshift($(document).find('.jumbo_about_img'), 400, 500);
+
+
+  checkandshift($(document).find('.jumbo_kova_img'), 400, 500);
+  checkandshift($(document).find('.jumbo_socket_img'), 400, 500);
+  checkandshift($(document).find('.jumbo_beacon_img'), 400, 500);
+
 
 
 }

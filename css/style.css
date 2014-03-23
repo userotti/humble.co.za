@@ -87,6 +87,63 @@
   padding-bottom: 0px;
 }
 
+.jumbo_about_img{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 600px;
+  background: url("../img/about.jpg") center right no-repeat;
+  
+  background-size: cover;
+  color: #FFFFFF;
+  
+  text-align: bottom;
+  position: relative;
+  padding-bottom: 0px;
+}
+
+
+.jumbo_kova_img{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 600px;
+  background: url("../img/kova.jpg") top left no-repeat;
+  
+  background-size: cover;
+  color: #FFFFFF;
+  
+  text-align: bottom;
+  position: relative;
+  padding-bottom: 0px;
+}
+
+.jumbo_socket_img{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 600px;
+  background: url("../img/socket.jpg") top left no-repeat;
+  
+  background-size: cover;
+  color: #FFFFFF;
+  
+  text-align: bottom;
+  position: relative;
+  padding-bottom: 0px;
+}
+
+.jumbo_beacon_img{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 600px;
+  background: url("../img/beacons.jpg") top left no-repeat;
+  
+  background-size: cover;
+  color: #FFFFFF;
+  
+  text-align: bottom;
+  position: relative;
+  padding-bottom: 0px;
+}
+
 #jumbo_oneline_txt {
  
   padding: 7px;
@@ -224,9 +281,17 @@ a#jumbo_links:hover {
 
 #jumbo_img_id > a:hover {
 
-  color: #ddd; 
-  text-decoration: none; 
+  
+  text-decoration: underline;
+  
+} 
 
+ 
+#jumbo_img_id > a.active {
+
+  
+  text-decoration: underline;
+  
 } 
 
 /* kkkklomp */
@@ -327,6 +392,8 @@ a#jumbo_links:hover {
 
 }
 
+
+
 .modal-open {
   overflow: hidden;
   overflow-y: auto;
@@ -410,5 +477,7 @@ body.modal-open,
   z-index:-1;
 
 }
+
+
 
 

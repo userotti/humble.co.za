@@ -1,6 +1,6 @@
+<script type="text/x-handlebars" data-template-name="hardware">
 
-
-    <script type="text/x-handlebars" data-template-name="product">
+       
            <!-- NAVIGATION -->
 
     
@@ -28,7 +28,7 @@
 
                     <!-- Products List -->  
 
-                    <!-- <span class="glyphicon glyphicon-home">h</span> -->
+                    
                     <li>{{#link-to 'index'class="navbutton"}} <span class="humble_nav_logo">h</span>{{/link-to}}</li>
                     <li>{{#link-to 'features' 'humbletill'  class="navbutton"}}humble Till{{/link-to}}</li>
                     <li>{{#link-to 'features' 'redworld'  class="navbutton"}}Redworld{{/link-to}}</li>
@@ -59,48 +59,21 @@
 
       </nav>
     
-      <div class="container-fluid"> 
-        <div {{bind-attr class=jumbo_img_class}} id="jumbo_img_id">
-            
-            
-
-            {{#link-to 'features'  id="jmbtext1"}} features {{/link-to}}
-
-           
-            <span id="jmbtext2"> / </span>
-
-             {{#link-to 'pricing'  id="jmbtext3"}} pricing {{/link-to}}
-
-             <span id="jmbtext4"> / </span>
-
-            {{#link-to 'whatyouneed'  id="jmbtext5"}} what you need {{/link-to}}
-
-             
-
-
-            <p id="jumbo_oneline_txt">{{oneline}}</p>
-
+        <div class="container-fluid"> 
+          <div {{bind-attr class=jumbo_img_class}} id="jumbo_img_id">
+              
            
 
-            
-
-            
-            
 
 
+          </div>
         </div>
-      </div>
-      
 
+        
+        <h1>  {{heading}} </h1>
 
-      
-      {{outlet}}
-
-     
-      
-    </script>
-
-
+        <p> {{text}} </p>
+        
 
 
     </script>

@@ -29,7 +29,7 @@
                     <!-- Products List -->  
 
                     
-                    <li>{{#link-to 'index'class="navbutton"}} <span class="glyphicon glyphicon-home"></span>{{/link-to}}</li>
+                    <li>{{#link-to 'index'class="navbutton"}} <span class="humble_nav_logo">h</span>{{/link-to}}</li>
                     <li>{{#link-to 'features' 'humbletill'  class="navbutton"}}humble Till{{/link-to}}</li>
                     <li>{{#link-to 'features' 'redworld'  class="navbutton"}}Redworld{{/link-to}}</li>
                     <li>{{#link-to 'features' 'pastel'  class="navbutton"}}Sage Pastel{{/link-to}}</li> 
@@ -39,9 +39,9 @@
                     <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hardware<b class="caret"></b></a>
                       <ul class="dropdown-menu">
-                        <li>{{#link-to 'hardware'}}Kova Stand{{/link-to}}</li>
-                        <li>{{#link-to 'hardware'}}Socket Mobile{{/link-to}}</li>
-                        <li>{{#link-to 'hardware'}}Beacons{{/link-to}}</li> 
+                        <li>{{#link-to 'hardware' 'kova' class='sub_menu_click'}}Kova Stand{{/link-to}}</li>
+                        <li>{{#link-to 'hardware' 'socketmobile' class='sub_menu_click'}}Socket Mobile{{/link-to}}</li>
+                        <li>{{#link-to 'hardware' 'beacons' class='sub_menu_click'}}Beacons{{/link-to}}</li> 
                       </ul>
                     </li>
 
@@ -50,8 +50,8 @@
                   
 
                   <ul class="nav navbar-nav navbar-right" id="nav-ul"> <!-- right hand elements -->
-                    <li ><a data-toggle="modal" href="#myModal"  > Sign in</a></li>
-                    <li ><a href="#"> Register</a></li>
+                    <li ><a data-toggle="modal" href="#myModalSign"  class"navbutton"> Sign in</a></li>
+                    <li ><a data-toggle="modal" href="#myModalReg" > Register</a></li>
                   </ul>
                   
                 </div><!-- /.navbar-collapse → -->
@@ -69,9 +69,9 @@
           </div>
         </div>
 
-        <h1> {{number}} </h1>
+      <!--  <h1> {{number}} </h1>
         <h1> {{address}} </h1>
-        <h1> {{city}} </h1>
+        <h1> {{city}} </h1> -->
 
         
 
