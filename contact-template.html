@@ -32,7 +32,7 @@
                     <li>{{#link-to 'index'class="navbutton"}} <span class="humble_nav_logo">h</span>{{/link-to}}</li>
                     <li>{{#link-to 'features' 'humbletill'  class="navbutton"}}humble Till{{/link-to}}</li>
                     <li>{{#link-to 'features' 'redworld'  class="navbutton"}}Redworld{{/link-to}}</li>
-                    <li>{{#link-to 'features' 'pastel'  class="navbutton"}}Sage Pastel{{/link-to}}</li> 
+                   {{!-- <li>{{#link-to 'sagepastel'  class="navbutton"}}Sage Pastel{{/link-to}}</li> --}}
                     
                     
 
@@ -41,7 +41,7 @@
                       <ul class="dropdown-menu">
                         <li>{{#link-to 'hardware' 'kova' class='sub_menu_click'}}Kova Stand{{/link-to}}</li>
                         <li>{{#link-to 'hardware' 'socketmobile' class='sub_menu_click'}}Socket Mobile{{/link-to}}</li>
-                        <li>{{#link-to 'hardware' 'beacons' class='sub_menu_click'}}Beacons{{/link-to}}</li> 
+                        
                       </ul>
                     </li>
 
@@ -50,7 +50,7 @@
                   
 
                   <ul class="nav navbar-nav navbar-right" id="nav-ul"> <!-- right hand elements -->
-                    <li ><a data-toggle="modal" href="#myModalSign"  class"navbutton"> Sign in</a></li>
+                    <li ><a data-toggle="modal" href="#myModalSign"  class"navbutton"> Sign In</a></li>
                     <li ><a data-toggle="modal" href="#myModalReg" > Register</a></li>
                   </ul>
                   
@@ -59,21 +59,52 @@
 
       </nav>
     
-        <div class="container-fluid"> 
+       {{!-- <div class="container-fluid"> 
           <div class="jumbo_contact_img" id="jumbo_img_id">
               
            
 
 
-
           </div>
-        </div>
+        </div> --}}
 
-      <!--  <h1> {{number}} </h1>
-        <h1> {{address}} </h1>
-        <h1> {{city}} </h1> -->
 
+        <div class="container" style="width: 100%">
+          <h1> Contact details:</h1>  
+          <div class="row">
+
+            <div class="col-md-2">
+                
+              
+                <h3> Address: </h3>
+                <h4> 37 Tauton Road</h4> 
+                <h4> Pietermaritzburg</h4>
+                <h4> 3201</h4>  
+                         
+
+            </div>
+
+            <div class="col-md-2 col-md-offset-0">
+                
+                <h3> Tell: </h3>
+                <h4> {{tell}}</h4> 
+               
         
+            </div>
+
+
+            <div class="col-md-2 col-md-offset-0">
+                
+                <h3> Email: </h3>
+                <h4> {{email}}</h4> 
+               
+        
+            </div>
+         
+          
+          </div>
+          <div id="map_canvas"></div>
+        </div>  
 
 
     </script>

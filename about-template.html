@@ -32,7 +32,7 @@
                     <li>{{#link-to 'index'class="navbutton"}} <span class="humble_nav_logo">h</span>{{/link-to}}</li>
                     <li>{{#link-to 'features' 'humbletill'  class="navbutton"}}humble Till{{/link-to}}</li>
                     <li>{{#link-to 'features' 'redworld'  class="navbutton"}}Redworld{{/link-to}}</li>
-                    <li>{{#link-to 'features' 'pastel'  class="navbutton"}}Sage Pastel{{/link-to}}</li> 
+                    {{!-- <li>{{#link-to 'sagepastel'  class="navbutton"}}Sage Pastel{{/link-to}}</li> --}}
                     
                     
 
@@ -41,7 +41,7 @@
                       <ul class="dropdown-menu">
                         <li>{{#link-to 'hardware' 'kova' class='sub_menu_click'}}Kova Stand{{/link-to}}</li>
                         <li>{{#link-to 'hardware' 'socketmobile' class='sub_menu_click'}}Socket Mobile{{/link-to}}</li>
-                        <li>{{#link-to 'hardware' 'beacons' class='sub_menu_click'}}Beacons{{/link-to}}</li> 
+                         
                       </ul>
                     </li>
 
@@ -50,7 +50,7 @@
                   
 
                   <ul class="nav navbar-nav navbar-right" id="nav-ul"> <!-- right hand elements -->
-                   <li ><a data-toggle="modal" href="#myModalSign"  class"navbutton"> Sign in</a></li>
+                   <li ><a data-toggle="modal" href="#myModalSign"  class"navbutton"> Sign In</a></li>
                     <li ><a data-toggle="modal" href="#myModalReg" > Register</a></li>
                   </ul>
                   
@@ -69,7 +69,32 @@
           </div>
         </div>
 
-      <p> {{about}} </p>
+        <div class="container" style="padding-bottom: 30px; width: 100%">
+
+          <h1> {{heading}} </h1>
+         
+          <p> {{paragraph1}} </p>
+         
+          
+          {{#each staff}}
+          <div class="row" style="margin: 0 auto;">  
+            
+                {{#if left_pos}}
+                <img class="col-md-offset-2 col-md-1" style="width: 150px; padding: 20px;" {{bind-attr src=img_url}}>
+                <p class="col-md-7" style="margin-top: 20px;" > {{textpara}}  </p>
+               {{else}}
+                 <p class="col-md-offset-1 col-md-7" style="margin-top: 20px;" >{{textpara}}  </p>
+                 <img class="col-md-1" style="width: 150px; padding: 20px;" {{bind-attr src=img_url}}>
+                
+               {{/if}}
+
+          
+          </div>
+          {{/each}}
+          
+         
+        
+        </div>
         
 
 

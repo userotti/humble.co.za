@@ -34,7 +34,7 @@
   margin-top: 0px;
   margin-bottom: 0px;
   padding-top: 600px;
-  background: url("../img/humbletill2.jpg") center right no-repeat;
+  background: url("../img/humbletill3.jpg") center left no-repeat;
   
   background-size: cover;
   color: #FFFFFF;
@@ -106,7 +106,7 @@
   margin-top: 0px;
   margin-bottom: 0px;
   padding-top: 600px;
-  background: url("../img/kova.jpg") top left no-repeat;
+  background: url("../img/kova2.jpg") top left no-repeat;
   
   background-size: cover;
   color: #FFFFFF;
@@ -119,8 +119,8 @@
 .jumbo_socket_img{
   margin-top: 0px;
   margin-bottom: 0px;
-  padding-top: 600px;
-  background: url("../img/socket.jpg") top left no-repeat;
+  padding-top: 100px;
+  background: url("../img/socket.jpg") bottom left no-repeat;
   
   background-size: cover;
   color: #FFFFFF;
@@ -166,8 +166,8 @@
   font-weight: 400;
   text-align: center;
   vertical-align: middle;
-  bottom: 30%;
-  right: 0;
+  bottom: 17%;
+  right: 5%;
 
 
 
@@ -340,11 +340,11 @@ a#jumbo_links:hover {
   padding-top: 18px;
   padding-left: 9px;
   padding-right: 9px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 
   
   
-  margin: 0px;
+  margin-bottom: 10px;
 
 }
 
@@ -450,8 +450,10 @@ body.modal-open,
 .bottomtext {
 
   color: #777777; 
-  padding: 10px;
+  padding: 15px;
   padding-top: 0px;
+  margin-bottom: 20px;
+  
    
   text-decoration: none;
   font-family: HelveticaNeueLight;
@@ -478,6 +480,91 @@ body.modal-open,
 
 }
 
+.greycolor{
+
+  color: #888888;
+
+}
+
+#map_canvas {
+        margin-top: 20px;
+        width: 600px;
+        height: 400px;
+      }
+
+.features_col_class{
+
+  
+  text-align: left;
+  
+  
 
 
+}
 
+.feat_head_col_class{
+
+  
+  text-align: left;
+  background-color: #ddeedd;
+
+}
+
+.feat_red_head_col_class{
+
+  
+  text-align: left;
+  background-color: #eedddd;
+
+}
+
+.package_col_class{
+
+  
+  text-align: center;
+
+
+}
+
+.highlight_package_col_class{
+
+  
+  text-align: center;
+  background-color: #3dad68;
+  color: #FFFFFF;  
+
+
+}
+
+.highlight_red_package_col_class{
+
+  
+  text-align: center;
+  background-color: #e1362f;
+  color: #FFFFFF;  
+
+
+}
+
+.table-no-border>thead>tr>th, 
+.table-no-border>tbody>tr>th, 
+.table-no-border>tfoot>tr>th, 
+.table-no-border>thead>tr>td, 
+.table-no-border>tbody>tr>td, 
+.table-no-border>tfoot>tr>td {
+  border-top: none; 
+  border-bottom: none; 
+}
+
+.table-no-border>tbody>tr>td {
+
+  border-top: solid 1px;
+  border-color: #aaaaaa
+
+} 
+
+.small_product_img {
+    
+    padding-bottom: 20px;
+    
+}

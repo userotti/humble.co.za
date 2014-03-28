@@ -7,11 +7,16 @@
     <!-- <link href="css/normalize.css" rel="stylesheet" > -->
     <link href="css/bootstrap_yeti.css" rel="stylesheet" media="screen">
     <link href="css/style.css" rel="stylesheet" media="screen">
-
+    <link rel="icon" 
+      type="image/ico" 
+      href="img/favicon.ico">
   </head>
   
-  <body style="">
-    
+  <body >
+
+   
+  
+   
     <!-- APP TEMPLATE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
     
     
@@ -36,6 +41,9 @@
 
     <!-- Contact & about Temp-->
 
+    <?php include('sagepastel-template.html'); ?>  
+   
+
     <?php include('contact-template.html'); ?>  
    
      <?php include('about-template.html'); ?>  
@@ -52,6 +60,15 @@
    <!--  <script src="//code.jquery.com/jquery.min.js"></script> -->
     <script src="js/libs/bootstrap.min.js"></script>
     <script src="js/libs/ember-1.4.0.js"></script>
+    
+    <script src="js/products_model.js"></script>
+    <script src="js/hardware_model.js"></script>
+    <script src="js/contact_about_model.js"></script>
+
+
+
     <script src="js/app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+   
   </body>
 </html>

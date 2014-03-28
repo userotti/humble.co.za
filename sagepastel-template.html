@@ -1,6 +1,6 @@
+ <script type="text/x-handlebars" data-template-name="sagepastel">
 
-
-    <script type="text/x-handlebars" data-template-name="product">
+       
            <!-- NAVIGATION -->
 
     
@@ -28,7 +28,7 @@
 
                     <!-- Products List -->  
 
-                    <!-- <span class="glyphicon glyphicon-home">h</span> -->
+                    
                     <li>{{#link-to 'index'class="navbutton"}} <span class="humble_nav_logo">h</span>{{/link-to}}</li>
                     <li>{{#link-to 'features' 'humbletill'  class="navbutton"}}humble Till{{/link-to}}</li>
                     <li>{{#link-to 'features' 'redworld'  class="navbutton"}}Redworld{{/link-to}}</li>
@@ -41,7 +41,7 @@
                       <ul class="dropdown-menu">
                         <li>{{#link-to 'hardware' 'kova' class='sub_menu_click'}}Kova Stand{{/link-to}}</li>
                         <li>{{#link-to 'hardware' 'socketmobile' class='sub_menu_click'}}Socket Mobile{{/link-to}}</li>
-                        
+                         
                       </ul>
                     </li>
 
@@ -58,51 +58,33 @@
 
 
       </nav>
-      
-
-
-      <div class="container-fluid"> 
-        <div {{bind-attr class=jumbo_img_class}} id="jumbo_img_id">
-            
-            
-
-              {{#link-to 'features'  id="jmbtext1"}} features {{/link-to}}
-
-             
-              <span id="jmbtext2"> / </span>
-
-               {{#link-to 'pricing'  id="jmbtext3"}} pricing {{/link-to}}
-
-               <span id="jmbtext4"> / </span>
-
-              {{#link-to 'whatyouneed'  id="jmbtext5"}} what you need {{/link-to}}
-
+    
+        <div class="container-fluid"> 
+          <div class="jumbo_pastel_img" id="jumbo_img_id">
+              
            
 
 
             <p id="jumbo_oneline_txt">{{oneline}}</p>
 
-           
-
-            
-
-            
-            
-
-
+          </div>
         </div>
-      </div>
-      
 
+        <div class="container">
 
-      
-      {{outlet}}
-
-     
-      
-    </script>
-
-
+          <div style="padding-bottom: 20px;">
+          <h1 class="text-center"> {{feature_heading}} </h1>
+          <h2 class="text-center greycolor"> {{feature_tagline}} </h2>
+          </div>
+          <div class="row">  
+          
+            <div class="col-md-2 col-md-offset-3 small_product_img"><img {{bind-attr src=feat_img_url}}> </div>
+             <div class="col-md-3 col-md-offset-1 text-left" ><p> {{feature_textbody}} </p>
+             </div>
+           
+          </div>  
+        </div>    
+        
 
 
     </script>
