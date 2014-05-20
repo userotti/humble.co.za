@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="210px"
+	 height="70px" viewBox="0 0 210 70" enable-background="new 0 0 210 70" xml:space="preserve">
+<g id="Layer_1" display="none">
+	<circle display="inline" fill="#222222" cx="175" cy="35.001" r="35"/>
+	<rect x="-3.659" y="-3.1" display="inline" fill="#222222" width="177.759" height="80.434"/>
+</g>
+<g id="Layer_2" display="none">
+	<circle display="inline" fill="#222222" cx="175" cy="34.884" r="35"/>
+	<rect x="-3.659" y="-3.217" display="inline" fill="#222222" width="177.759" height="80.434"/>
+	<text transform="matrix(1 0 0 1 66.332 42.666)" display="inline" fill="#FFFFFF" font-family="'OpenSans'" font-size="24">features</text>
+</g>
+<g id="Layer_3" display="none">
+	<circle display="inline" fill="#222222" cx="34.999" cy="34.783" r="35"/>
+	<rect x="35.899" y="-7.55" display="inline" fill="#222222" width="177.759" height="80.434"/>
+	<text transform="matrix(1 0 0 1 73.6665 41)" display="inline" fill="#FFFFFF" font-family="'OpenSans'" font-size="24">process</text>
+</g>
+<g id="Layer_4" display="none">
+	<circle display="inline" fill="#222222" cx="174.83" cy="34.884" r="35"/>
+	<rect x="-3.83" y="-3.217" display="inline" fill="#222222" width="177.759" height="80.434"/>
+	<text transform="matrix(1 0 0 1 66.1611 42.666)" display="inline" fill="#FFFFFF" font-family="'OpenSans'" font-size="24">pricing</text>
+</g>
+<g id="Layer_5" display="none">
+	<circle display="inline" fill="#222222" cx="35.333" cy="34.633" r="35"/>
+	<rect x="36.232" y="-7.7" display="inline" fill="#222222" width="177.76" height="80.435"/>
+	<text transform="matrix(1 0 0 1 28 40.8496)" display="inline" fill="#FFFFFF" font-family="'OpenSans'" font-size="24">getting started</text>
+</g>
+<g id="Layer_6">
+	<circle fill="#222222" cx="175" cy="34.967" r="35"/>
+	<rect x="-3.659" y="-3.134" fill="#222222" width="177.759" height="80.435"/>
+	<text transform="matrix(1 0 0 1 49.665 41.083)" display="none" fill="#FFFFFF" font-family="'OpenSans'" font-size="24">Questions</text>
+</g>
+</svg>

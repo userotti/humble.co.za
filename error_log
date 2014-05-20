@@ -1,0 +1,1 @@
+[09-Apr-2014 15:29:50 Africa/Johannesburg] PHP Fatal error:  Call to undefined function gen_uuid() in /home/humbleue/public_html/christian/register.php on line 5
