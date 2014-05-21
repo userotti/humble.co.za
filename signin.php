@@ -68,7 +68,7 @@ if(!isset($_COOKIE['deviceGUID'])){
 
     <form class="form-horizontal logintrigger" style="border: none;" action="http://api.humble.co.za/1.1/login" method="POST" data-callback="do_login">
                 
-                 <h2 style="margin-bottom: 45px;"> humble Sign In  </h2>
+                 <h2 style="margin-bottom: 45px;"> humble Log In  </h2>
                 
                  <div class="log-error"></div>
               
@@ -87,7 +87,7 @@ if(!isset($_COOKIE['deviceGUID'])){
                     <div class="col-lg-7">
                       <input type="password" class="form-control" name="password" id="inputPass" placeholder="humble Password">
                       <label><a style="float: left; margin-top: 35px;" id="lostlink" href="lostpassword.php"> Forgot Password? </a></label>
-                      <button type="submit" class="btn btn-success" style="float: right; margin-top: 35px;"> Sign In </button>
+                      <button type="submit" class="btn btn-success" style="float: right; margin-top: 35px;"> Log In </button>
                       
                     </div>  
 
@@ -106,7 +106,7 @@ if(!isset($_COOKIE['deviceGUID'])){
 
                       <input type="text" class="form-control" name="pin" id="inputPin" placeholder="Cashier Pin">
                       
-                      <button type="submit" class="btn btn-success" style="float: right; margin-top: 35px;"> Sign In </button>
+                      <button type="submit" class="btn btn-success" style="float: right; margin-top: 35px;"> Log In </button>
                     </div>
                   </div> 
                   

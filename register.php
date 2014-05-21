@@ -136,7 +136,7 @@ if(!isset($_COOKIE['deviceGUID'])){
 	<script type="text/html" id="register-tmpl">
 		<form class="form-horizontal baldrick" style="border: none;" action="http://api.humble.co.za/1.1/support/register" method="POST" data-target="#reg-wrap" data-template="#company-details-tmpl" data-callback="save_reg">
 
-			<h2 style="margin-bottom: 45px;"> humble Registration  </h2>
+			<h2 style="margin-bottom: 45px;"> humble Sign Up  </h2>
 
 			<div class="form-group bietjieweyerform">
 
@@ -197,7 +197,7 @@ if(!isset($_COOKIE['deviceGUID'])){
 			<div class="form-group bietjieweyerform">
 				<div class="col-lg-3"></div>
 				<div class="col-lg-7">
-					<button type="submit" id="reg-submit" class="btn btn-success" style="float: right; margin-top: 35px;"> Register </button>
+					<button type="submit" id="reg-submit" class="btn btn-success" style="float: right; margin-top: 35px;"> Sign Up </button>
 				</div>
 			</div>
 
@@ -219,19 +219,13 @@ if(!isset($_COOKIE['deviceGUID'])){
 
 			<div class="form-group bietjieweyerform">
 
-				<label for="regNr" class="col-lg-4 control-label">Company Registration Number</label>
+				<label for="inputCell" class="col-lg-4 control-label">Store Type</label>
 				<div class="col-lg-7">
-					<input type="text" class="form-control" name="regnr" id="regNr" placeholder="Company Registration Number">
-				</div>
-			</div>  
-			<div class="form-group bietjieweyerform">
+					<input type="text" class="form-control" name="storetype" id="inputCell" placeholder="Store Type" required>
+					
+				</div>  
 
-				<label for="inputVatNr" class="col-lg-4 control-label">VAT Number</label>
-				<div class="col-lg-7">
-					<input type="text" class="form-control" name="vatnr" id="inputVatNr" placeholder="VAT Number">
-				</div>
-
-			</div>    
+			</div>
 
 			<div class="form-group bietjieweyerform">
 
