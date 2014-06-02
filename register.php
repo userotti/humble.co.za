@@ -39,6 +39,9 @@ if(!isset($_COOKIE['deviceGUID'])){
 }
 
 ?><!DOCTYPE html>
+
+
+
 <html>
 <head>
 	<title>humble</title>
@@ -119,7 +122,7 @@ if(!isset($_COOKIE['deviceGUID'])){
 					</div>
 				</div>     
 			</div>
-		</div>
+		</div>-
 
 
 		<?php include 'footer.php' ?> 
@@ -136,7 +139,7 @@ if(!isset($_COOKIE['deviceGUID'])){
 	<script type="text/html" id="register-tmpl">
 		<form class="form-horizontal baldrick" style="border: none;" action="http://api.humble.co.za/1.1/support/register" method="POST" data-target="#reg-wrap" data-template="#company-details-tmpl" data-callback="save_reg">
 
-			<h2 style="margin-bottom: 45px;"> humble Sign Up  </h2>
+			<h2 style="margin-bottom: 45px;"> Sign Up  </h2>
 
 			<div class="form-group bietjieweyerform">
 
@@ -176,7 +179,7 @@ if(!isset($_COOKIE['deviceGUID'])){
 
 			<div class="form-group bietjieweyerform password-group">
 
-				<label for="firstPass" class="col-lg-3 control-label">humble Password</label>
+				<label for="firstPass" class="col-lg-3 control-label"> Password</label>
 				<div class="col-lg-7">
 					<input required type="password" class="form-control passin" id="firstPass" placeholder="humble Password">
 
@@ -339,6 +342,8 @@ if(!isset($_COOKIE['deviceGUID'])){
 
 			parent.removeClass('has-error');
 
+			console.log(obj);
+
 			if(obj.data.error){
 				parent.addClass('has-error');
 				errorbox.html(obj.data.error).show();
@@ -351,6 +356,8 @@ if(!isset($_COOKIE['deviceGUID'])){
 		}
 
 		function save_reg(obj){
+
+			console.log(obj);
 
 			var errors = jQuery('.reg-error');
 			errors.html('');
@@ -388,7 +395,7 @@ if(!isset($_COOKIE['deviceGUID'])){
 
 
 		jQuery(function($){
-console.log("hapen");
+
 	// INITIALIZE BALDRICK
 	if(jQuery.cookie('company-guid')){
 		

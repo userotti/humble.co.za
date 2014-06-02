@@ -58,8 +58,8 @@
                   
 
                 <ul class="nav navbar-nav navbar-right" id="nav-ul"> <!-- right hand elements -->
-                <li ><a  href="signin.php"  class="navbutton"> Log In </a></li>
-                    <li ><a  href="register.php" class="navbutton" > Sign Up </a></li> 
+                <li ><a  href="login.php"  class="navbutton"> Log In </a></li>
+                    <li ><a  href="signup.php" class="navbutton" > Sign Up </a></li> 
                 </ul>
                   
                 </div><!-- /.navbar-collapse → -->

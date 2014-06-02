@@ -130,6 +130,7 @@ if(!isset($_COOKIE['deviceGUID'])){
    <script type="text/javascript">
    function do_pin_login(obj){
 
+      console.log(obj);
       var errors = jQuery('.pin-error');
       errors.html('');
 

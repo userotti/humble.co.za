@@ -26,6 +26,8 @@
 		},
 		request			: function(opts){
 
+			console.log(opts);
+
 			if( ( opts.params.trigger.data('cacheLocal') || opts.params.trigger.data('cacheSession') ) && !opts.params.trigger.data('cachePurge') ){
 
 				var key;
@@ -107,6 +109,7 @@
 			}
 			return input;
 		},
+
 		triggerClass	= this.selector,
 		inst			= this.not('._tisBound');
 
@@ -376,6 +379,8 @@
 	};
 	$(function($){
 		$('.baldrick').baldrick();
+
+
 	});
 
 })(jQuery);
