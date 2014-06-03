@@ -49,7 +49,7 @@ function AjaxCallToSiteAuthLogin(){
 			if (response.message == "OK") { //$.cookie('site_guid' , response.site_guid, {path: '/', domain: 'humble.co.za'});
 				
 				
-				$.cookie('site_guid' , response.site_guid, {path: '/', domain: 'humble.co.za'});
+				$.cookie('siteguid' , response.site_guid, {path: '/', domain: 'humble.co.za'});
 
 				$('#main-error').html('<p style="font-size: 15px; color: #ff0000"> Login Successful. </p>').show();
 				$('#main-error').fadeOut(3000);
@@ -107,9 +107,9 @@ function pinIsSet(){
 
 function siteguidIsSet(){	
 
-	console.log("site_guid cookie: " + $.cookie('site_guid'))
+	console.log("siteguid cookie: " + $.cookie('siteguid'))
 	
-	if ($.cookie('site_guid')){
+	if ($.cookie('siteguid')){
 
 		return true;
 
@@ -169,9 +169,9 @@ $(document).ready(function(){
 
 		if ((email_val.length != 0) && (pass_val.length != 0) ){
 
-			if ($.cookie('site_guid')) {
+			if ($.cookie('siteguid')) {
 
-				login_JSON.siteguid = $.cookie('site_guid');
+				login_JSON.siteguid = $.cookie('siteguid');
 
 			}
 
@@ -186,9 +186,9 @@ $(document).ready(function(){
 
 		}else{
 
-			if ( (pin_val.length == 4) && ($.cookie('site_guid')) ){
+			if ( (pin_val.length == 4) && ($.cookie('siteguid')) ){
 
-				login_JSON.siteguid = $.cookie('site_guid');	
+				login_JSON.siteguid = $.cookie('siteguid');	
 				login_JSON.device = $.cookie('deviceGUID');
 				login_JSON.pin = pin_val;
 				

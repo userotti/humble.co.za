@@ -72,7 +72,7 @@ if(!isset($_COOKIE['deviceGUID'])){
 
               <div class="form-group bietjieweyerform">
 
-                <label for="inputEmail" class="col-lg-3 control-label">First Name</label>
+                <label for="inputEmail" class="col-lg-3 control-label">Email</label>
                 <div class="col-lg-7">
                       <input required name="email" type="text" class="form-control" id="inputEmail" placeholder="Email">
                       <span class="help-block" id="firstname-error" style="display:none;"></span>
@@ -85,7 +85,8 @@ if(!isset($_COOKIE['deviceGUID'])){
                 <label for="inputEmail" class="col-lg-3 control-label">Password</label>
                 <div class="col-lg-7">
                       <input required name="pass" type="password" class="form-control" id="inputPass" placeholder="Password">
-                      <span class="help-block" id="password-error" style="display:none;"></span>    
+                      <span class="help-block" id="password-error" style="display:none;"></span>
+                      <label><a style="float: left; margin-top: 35px;" id="lostlink" href="lostpassword.php"> Forgot Password? </a></label>    
                      
                 </div>
 

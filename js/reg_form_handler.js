@@ -57,6 +57,12 @@ var userdata_JSON = {
 
 	"storetype" : "null",
     "packageguid" : "null",	
+
+    "accname" : "null",
+    "acctype" : "null",
+    "accnr" : "null",
+    "branchcode" : "null",
+
     "live" : "null",
     "message" : "null",
 
@@ -83,6 +89,8 @@ function setUserData(userdata, serverobject){
 	userdata.message = serverobject.message;
 	userdata.channelguid = serverobject.channelguid;
 
+	console.log(userdata);
+
 
 };
 
@@ -91,8 +99,7 @@ function setUserData(userdata, serverobject){
 
 function AjaxCallToUserAuth(){
 
-	//console.log($.cookie('deviceGUID'));
-
+	
 	
 	login_JSON['email'] = userdata_JSON['email'];
 	login_JSON['password'] = userdata_JSON['pword'];
@@ -115,12 +122,15 @@ function AjaxCallToUserAuth(){
 
 			$.cookie('clean_login','true', {path: '/', domain: 'humble.co.za'});
 			
-			$.cookie('site_guid', response.siteguid, {path: '/', domain: 'humble.co.za'});
+			$.cookie('siteguid', null, {path: '/', domain: 'humble.co.za'});
 
-			
-		
+			$.cookie('siteguid', userdata_JSON.siteguid, {path: '/', domain: 'humble.co.za'});
 
-			//window.location = 'http://till.humble.co.za';
+			console.log(userdata_JSON.siteguid);
+			console.log($.cookie('siteguid'));
+				
+
+			window.location = 'http://till.humble.co.za';
 
 
 		},
@@ -137,6 +147,80 @@ function AjaxCallToUserAuth(){
 
 };			
 
+
+function isEmpty(value){
+
+	if ((value == "") || (value == null) || (value == "null")){
+
+
+		return true; 
+
+	}else{
+
+
+		return false;
+
+	}
+
+
+}
+function populateWhatWeHave(p_userdata){
+
+	if (p_userdata.live == -1){
+
+		console.log("splinter nuwe man:");
+		console.log(p_userdata);
+
+
+		if (!isEmpty(p_userdata.fname)){
+
+			$('#inputFirstName').val(p_userdata.fname);
+
+		}
+
+		if (!isEmpty(p_userdata.sname)){
+
+			$('#inputSurname').val(p_userdata.sname);
+
+		}
+
+		if (!isEmpty(p_userdata.cellnr)){
+
+			$('#inputCell').val(p_userdata.cellnr);
+
+		}
+
+		
+		/*
+		userdata_JSON["companyname"] = $('#companyName').val().toString();
+		userdata_JSON["sitename"] = $('#storeName').val().toString();
+		userdata_JSON["storetype"] = $('#storeType').val().toString();*/
+
+		if (!isEmpty(p_userdata.companyname)){
+
+			$('#companyName').val(p_userdata.companyname);
+
+		}
+
+		if (!isEmpty(p_userdata.sitename)){
+
+			$('#storeName').val(p_userdata.sitename);
+
+		}
+
+		if (!isEmpty(p_userdata.storetype)){
+
+			$('#storeType').val(p_userdata.storetype);
+
+		}
+
+	}
+
+
+
+
+};
+
 function AjaxCallToEmailValidate(field){
 
 	$.ajax({
@@ -147,26 +231,60 @@ function AjaxCallToEmailValidate(field){
 		success: function(response) {
 
 
-			setUserData(userdata_JSON, response);
-
-				
+			
 
 			switch (field){
 
 				case "email" :
 					
+					setUserData(userdata_JSON, response);
 					errorMessage("email");
 					disabledForm();
+
+					populateWhatWeHave(response);
+
+					if (companyDetailsLooksOK()){
+
+						$('#company-details-btn').attr("disabled", false);
+
+					}else{
+				
+						$('#company-details-btn').attr("disabled", true);
+
+					}
+
 
 				break;
 
 				case "fname" :
 
+					setUserData(userdata_JSON, response);
+
+				
+					
+				
+				break;
+
+				case "sname" :
+
+					setUserData(userdata_JSON, response);
+
+				
+					
+				
+				break;
+
+				case "cellnr" :
+
+					setUserData(userdata_JSON, response);
+
+				
 					
 				
 				break;
 
 				case "stage1_btn" :
+				setUserData(userdata_JSON, response);
 
 				$('.client-details-stage').hide();
 				$('.company-details-stage').show();
@@ -174,6 +292,8 @@ function AjaxCallToEmailValidate(field){
 				break;
 
 				case "stage2_btn" :
+				setUserData(userdata_JSON, response);
+
 
 				$('.company-details-stage').hide();
 				$('.package-details').show();
@@ -181,9 +301,33 @@ function AjaxCallToEmailValidate(field){
 				break;
 
 
-				case "stage3_btn" :
+				case "stage3_free_btn" :
+
+					userdata_JSON.live = response.live;
 
 					AjaxCallToUserAuth();
+
+				break;
+
+				case "stage3_pro_btn" :
+
+					/*userdata_JSON.live = response.live;
+
+						AjaxCallToUserAuth();*/
+					$('.package-details').hide();
+					$('.banking-details-stage').show();	
+
+
+				break;
+
+				case "stage4_btn" :
+
+					
+
+					userdata_JSON.live = response.live;
+					AjaxCallToUserAuth();
+					
+
 
 				break;
 
@@ -387,12 +531,35 @@ function disabledForm(){
 
 function companyDetailsLooksOK(){
 
+	console.log("$('#companyName').val()" + $('#companyName').val());
+
+
 	if (($('#companyName').val().length != 0) && ($('#storeType').val().length != 0) && ($('#storeName').val().length != 0)){
+
+		//console.log("compadetails looks ok");
+		return true;
+	}	
+	else{
+		
+
+		//console.log("compadetails does not look good");
+		return false;
+
+	}			
+
+}
+
+function bankingDetailsLooksOK(){
+
+	console.log("$('#accountName').val()" + $('#accountName').val());
+
+
+	if (($('#accountName').val().length != 0) && ($('#accountNumber').val().length >= 10) && ($('#branchCode').val().length >= 6)){
 
 		return true;
 	}	
 	else{
-	
+
 		return false;
 
 	}			
@@ -444,7 +611,7 @@ function errorMessage(field){
 						
 						
 						parent.addClass('has-error');
-						errorbox.html('User already exists.  <a href="#"> Log in </a>').show();
+						errorbox.html('User already exists.  <a href="login.php"> Log in </a>').show();
 						
 
 
@@ -461,7 +628,7 @@ function errorMessage(field){
 			}
 
 		break;
-
+		/*niksniksnioknksninkknsinks*/
 
 		case "fname":
 
@@ -772,9 +939,8 @@ $(document).ready(function(){
 
 	//STAGE 2 //////////////
 
-
-
-
+	
+		
 
 
 	$('.company-details-stage').on("keyup", function(){
@@ -801,6 +967,7 @@ $(document).ready(function(){
 		userdata_JSON["sitename"] = $('#storeName').val().toString();
 		userdata_JSON["storetype"] = $('#storeType').val().toString();
 
+
 		
 		AjaxCallToEmailValidate("stage2_btn");
 
@@ -817,6 +984,31 @@ $(document).ready(function(){
 
 
 
+	$('.package-button').attr('disabled', true);
+
+	$('#terms1-chk-box').on('click', function(){
+
+		console.log("hallo?");
+
+
+		$('#free-package-btn').attr('disabled', !($('#free-package-btn').attr('disabled')));
+
+	
+
+
+	});
+
+	$('#terms2-chk-box').on('click', function(){
+
+		console.log("hallo?");
+
+
+		$('#pro-package-btn').attr('disabled', !($('#pro-package-btn').attr('disabled')));
+
+	
+
+
+	});
 
 
 
@@ -825,11 +1017,29 @@ $(document).ready(function(){
 	$('#free-package-btn').on('click', function(){
 
 
-		$('.package-button').attr('disabled', true);
+		$('#free-package-btn').attr('disabled', true);
 
 		userdata_JSON["packageguid"] = "3E4172B5-C97B-49CF-9A9FCFDF1C4EE63F";
+		userdata_JSON["accname"] = "Not Applicable";
+		userdata_JSON["acctype"] = "Not Applicable";
+		userdata_JSON["accnr"] = "Not Applicable";
+		userdata_JSON["branchcode"] = "Not Applicable";
 
-		AjaxCallToEmailValidate("stage3_btn");
+		AjaxCallToEmailValidate("stage3_free_btn");
+
+
+	});
+
+	$('#pro-package-btn').on('click', function(){
+
+
+		$('#pro-package-btn').attr('disabled', true);
+
+		userdata_JSON["packageguid"] = "b999ce3e-d1ed-11e3-b186-005056ba5bac";
+
+
+
+		AjaxCallToEmailValidate("stage3_pro_btn");
 
 
 	});
@@ -843,8 +1053,98 @@ $(document).ready(function(){
 
 
 
+//STAGE 4 ////////////// BANKING
 
 
+	$('#banking-details-btn').on('click', function(){
+
+		$('#banking-details-btn').attr('disabled', true);
+		AjaxCallToEmailValidate("stage4_btn");
+
+	});
+
+
+
+	$('.banking-details-stage').on("keyup", function(){
+	
+		if (bankingDetailsLooksOK()){
+
+			$('#banking-details-btn').attr("disabled", false);
+
+		}else{
+	
+			$('#banking-details-btn').attr("disabled", true);
+
+		}
+
+	});
+
+	$('#accountNumber').on("keyup", function(){
+		
+		errorbox = $('#accountnum-error'),
+		parent = errorbox.closest('.form-group');
+
+		parent.removeClass('has-error');
+		errorbox.html('').show();
+
+		if ($('#accountNumber').val().length >= 10){
+
+			errorbox.html('').hide();
+
+		}else{
+	
+			parent.addClass('has-error');
+			errorbox.html('Account number should have at least 10 digits.').show();
+
+		}
+
+	});
+
+	$('#branchCode').on("keyup", function(){
+		
+		errorbox = $('#branchcode-error'),
+		parent = errorbox.closest('.form-group');
+
+		parent.removeClass('has-error');
+		errorbox.html('').show();
+
+		if ($('#branchCode').val().length >= 6){
+
+			errorbox.html('').hide();
+
+		}else{
+	
+			parent.addClass('has-error');
+			errorbox.html('If branch code is less than 6 digits, fill up to 6 digits with 0s').show();
+
+		}
+
+	});
+
+/*
+errorbox = $('#confirm-password-error'),
+			parent = errorbox.closest('.form-group');
+
+			parent.removeClass('has-error');
+			errorbox.html('').show();
+
+			if(confirmPasswordLooksOK()) {
+				
+				errorbox.html('').hide();
+				confirm_ok = true;
+				
+			
+
+			}else{
+				
+				if (pass2_val.length > 6){
+					parent.addClass('has-error');
+					errorbox.html('Your passwords need to match.').show();
+				}
+
+				
+
+*/
 
 
 //GLOBAL FUNCS //////////

@@ -76,7 +76,7 @@ if(!isset($_COOKIE['deviceGUID'])){
 						
 						<div id="height-wrapper" style="">
 
-							<form class="form-horizontal client-details-stage" style="border: none;" action="http://api.humble.co.za/1.1/email_validate" method="POST">
+							<form class="form-horizontal client-details-stage" style="border: none;  " action="http://api.humble.co.za/1.2/email_validate" method="POST">
 
 								
 
@@ -150,7 +150,7 @@ if(!isset($_COOKIE['deviceGUID'])){
 
 							</form>
 
-							<form class="form-horizontal company-details-stage" style="border: none; display:none;" action="http://api.humble.co.za/1.1/email_validate" method="POST">
+							<form class="form-horizontal company-details-stage" style="border: none; display:none;" action="http://api.humble.co.za/1.2/email_validate" method="POST">
 
 									
 
@@ -180,21 +180,21 @@ if(!isset($_COOKIE['deviceGUID'])){
 										<div class="col-lg-7">
 											<input type="text" class="form-control" name="sitename" id="storeName" placeholder="Store Name" required>
 											<span class="help-block" id="store-name-error" style="display:none;"></span>	
-											<button id="company-details-btn" disabled="true" class="btn btn-success" style="float: right; margin-top: 35px;"> Next </button>
+											<button id="company-details-btn" disabled="false" class="btn btn-success" style="float: right; margin-top: 35px;"> Next </button>
 										</div>  
 
 									</div>
 
 							</form>
 
-							<div class="package-details" style="display: none">
+							<div class="package-details" style="display:none;">
 
 								<div  style="margin-top: 35px; align: center; paddin-left: auto;">	
 								
 							    <div  class="row main_pricing_div">
 
 
-							        <div class="col-md-4 col-md-offset-4 main_col_height">
+							        <div class="col-md-5 col-md-offset-0 main_col_height">
 							           <div class="header_area" style="background-color: #ffffff; color: #000000">  
 							            <h2 > Basic  </h2> 
 							            <p style="font-weight: 600; font-size: 20px" > Free </p>
@@ -206,8 +206,36 @@ if(!isset($_COOKIE['deviceGUID'])){
 							            <p> 10 products </p> 
 							            <p> No Bank Details required </p>
 							           </div>
+										<div class="checkbox">
+										    <label>
+										      <input id="terms1-chk-box" type="checkbox"> I've read and agreed to the <a href="http://www.humble.co.za/terms_and_conditions/Humble_End_User_Licence_Agreement_draft.pdf"> terms and conditions</a>. 
+										    </label>
+										  </div>
 
-							           <button type="button" class="btn btn-success  package-button" id="free-package-btn">Free</button>
+							           <button type="button" class="btn btn-success  package-button" disabled="true" id="free-package-btn">Free</button>
+
+							        </div>
+
+
+							        <div class="col-md-5 col-md-offset-1 main_col_height">
+							           <div class="header_area" style="background-color: #ffffff; color: #000000">  
+							            <h2 > Professional  </h2> 
+							            <p style="font-weight: 600; font-size: 20px" > R225 per till p/m </p>
+							           </div>
+
+							           <div class="features_area">
+							            <p> unlimited tills </p> 
+							            <p> unlimited users </p> 
+							            <p> unlimited products </p> 
+							            <p> Bank Details required </p>
+							           </div>
+										<div class="checkbox">
+										    <label>
+										      <input id="terms2-chk-box" type="checkbox"> I've read and agreed to the <a href="http://www.humble.co.za/terms_and_conditions/Humble_End_User_Licence_Agreement_draft.pdf"> terms and conditions</a>. 
+										    </label>
+										  </div>
+
+							           <button type="button" class="btn btn-success  package-button" disabled="true" id="pro-package-btn">Pro</button>
 
 							        </div>
 							      
@@ -217,6 +245,65 @@ if(!isset($_COOKIE['deviceGUID'])){
 								</div>
 
 							</div>
+
+
+							<form class="form-horizontal banking-details-stage" style="border: none; display:none; " action="http://api.humble.co.za/1.2/email_validate" method="POST">
+
+									
+
+									<div class="form-group bietjieweyerform">
+
+										<label for="accountNumber" class="col-lg-3 control-label">Account Name *</label>
+										<div class="col-lg-7">
+											<input type="text" name="accnumber" class="form-control" id="accountName" placeholder="Account Name" required>
+											
+										</div>
+									</div>
+
+									<div class="form-group bietjieweyerform">
+
+										<label for="accountType" class="col-lg-3 control-label">Account Type *</label>
+										<div class="col-lg-7">
+											
+											 <select class="form-control" id="accountType">
+											
+											  <option value="volvo">Savings</option>
+											  <option value="saab">Check</option>
+											  <option value="mercedes">Current</option>
+											 
+											</select>
+
+	
+    
+
+										</div>  
+
+									</div>
+
+									<div class="form-group bietjieweyerform">
+
+										<label for="accountNumber" class="col-lg-3 control-label">Account Number *</label>
+										<div class="col-lg-7">
+											<input type="text" class="form-control" name="accnr" id="accountNumber" placeholder="Account Number" required>
+											<span class="help-block" id="accountnum-error" style="display:none;"></span>
+											
+										</div>  
+
+									</div>
+
+									<div class="form-group bietjieweyerform">
+
+										<label for="branchCode" class="col-lg-3 control-label">Branch Code *</label>
+										<div class="col-lg-7">
+											<input type="text" class="form-control" name="branchcode" id="branchCode" placeholder="Branch Code" required>
+											<span class="help-block" id="branchcode-error" style="display:none;"></span>
+											<button id="banking-details-btn" disabled="false" class="btn btn-success" style="float: right; margin-top: 35px;"> Sign Up </button>
+											
+										</div>  
+
+									</div>
+
+							</form>
 
 						
 

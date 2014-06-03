@@ -26,7 +26,7 @@
 
     <div class="col-md-8 col-md-offset-2" style="margin-top: 15px; margin-bottom: -15px;">  
 
-    <form id="recover-form" class="form-horizontal baldrick" action="http://api.humble.co.za/1.1/recover-password" data-callback="recover_result" style="border: none;" method="POST">
+    <form id="recover-form" class="form-horizontal baldrick" action="http://api.humble.co.za/1.2/recover-password" data-callback="recover_result" style="border: none;" method="POST">
                 
         <h2 style="margin-bottom: 45px;"> Password Recovery  </h2>
                 
@@ -47,7 +47,7 @@
          
             <div class="col-lg-7">
               
-                <a href="signin.php" class="btn btn-success" style="float: right; margin-top: 35px;"> Sign In </a>
+                <a href="login.php" class="btn btn-success" style="float: right; margin-top: 35px;"> Log in </a>
             </div>
         </div>
     </span>
@@ -65,12 +65,20 @@
    </div>
 
    <?php include 'scripts.php' ?>
+  
 
-   
+  <script src="js/libs/mandrill.min.js"></script>
+
+
   <script type="text/javascript">
-  function recover_result(obj){
+
+   function recover_result(obj){
     var error = jQuery('#user-error'),
         parent = error.closest('.form-group');
+
+
+
+      console.log("back from the server");
 
       error.html('').hide();
       parent.removeClass('has-error');
@@ -80,7 +88,63 @@
       parent.addClass('has-error');
 
     }else{
+      
+      console.log("stuur hom!");
+      
+
+      var params = {
+          "message": {
+
+              "merge_vars" : [
+                  {
+                      "rcpt": obj.data.email,
+                      "vars": [
+                          {
+                              "name": "fname",
+                              "content": obj.data.fname
+                          },
+                          {
+                              "name": "email",
+                              "content": obj.data.email
+                          },
+                          {
+                              "name": "pword",
+                              "content": obj.data.pword
+                          },
+                          {
+                              "name": "cashierpin",
+                              "content": obj.data.cashierpin
+                          }
+                      ]
+                  }
+              ],
+
+              "from_email":"support@humble.co.za",
+              "to":[{"email": obj.data.email}],
+              "subject": "humble log in details",
+              "html" : "<h4> Hi *|fname|* ,Your humble <strong> login details </strong> as requested:  </h4> <p> <strong> Email: </strong> *|email|* </p> <p> <strong> Password: </strong> *|pword|* </p> <p> <strong> Cashier pin: </strong> *|cashierpin|* </p> <br> <p>humble support</p> <img src='http://www.humble.co.za/img/HUMBLELOGO_signature.png'> ",
+            /*  "html": "<h2> Hi *|fname|* , your humble login details as requested: <h2> <p> Email: *|email|* </p> <p> Password: *|pword|* </p> <p> Cashier pin: *|cashierpin|* </p> function
+                    <br> <p>humble support</p> <img src='humble.co.za/img/HUMBLELOGO_signature.png'>",*/
+
+
+              "autotext": "Your humble login details, password: " + obj.data.pword + ",cashierpin: " + obj.data.cashierpin
+          }
+      };
+
+      var man = new mandrill.Mandrill('b12205X19GaL8vboerDGfg');
+
+      man.messages.send(params, function(res) {
+          console.log(res);
+      }, function(err) {
+          console.log(err);
+      });
+
+      params = null;
+
+
       jQuery('#recover-form').fadeOut(function(){
+
+
         jQuery('#recover-result').fadeIn();
       })
     }
